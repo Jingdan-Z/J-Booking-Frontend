@@ -1,4 +1,4 @@
-const domain = 'http://localhost:8080';
+const domain = "http://localhost:8080";
 //token response body
 //fetch => web api
 export const login = (credential, asHost) => {
