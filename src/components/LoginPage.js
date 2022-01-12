@@ -18,7 +18,7 @@ class LoginPage extends React.Component {
     const formInstance = this.formRef.current;
  
     try {
-      await formInstance.validateFields();
+      await formInstance.validateFields(); //syntax sugar
     } catch (error) {
       return;
     }
@@ -28,7 +28,7 @@ class LoginPage extends React.Component {
     });
  
     try {
-      const { asHost } = this.state;
+      const { asHost } = this.state;//destructuring same as const as Host = this.state.asHost
       const resp = await login(formInstance.getFieldsValue(true), asHost);
       this.props.handleLoginSuccess(resp.token, asHost);
     } catch (error) {
@@ -80,7 +80,7 @@ class LoginPage extends React.Component {
             rules={[
               {
                 required: true,
-                message: "Please input your Username!",
+                message: "Please enter your Username!",
               },
             ]}
           >
@@ -95,7 +95,7 @@ class LoginPage extends React.Component {
             rules={[
               {
                 required: true,
-                message: "Please input your Password!",
+                message: "Please enter your Password!",
               },
             ]}
           >
