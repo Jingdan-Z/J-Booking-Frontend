@@ -3,7 +3,7 @@ import { UserOutlined } from "@ant-design/icons";
 import React from "react";
 import LoginPage from "./components/LoginPage";
 import HostHomePage from "./components/HostHomePage";
-
+import GuestHomePage from "./components/GuestHomePage";
 const { Header, Content } = Layout;
 //render: the process to convert data to visulization (view)
 class App extends React.Component {
@@ -51,7 +51,7 @@ class App extends React.Component {
       return <HostHomePage />;
     }
  
-    return <div>guest home page</div>;
+    return <GuestHomePage />;
   };
 userMenu = (
     <Menu>
